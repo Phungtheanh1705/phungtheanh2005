@@ -1,0 +1,40 @@
+Viết đoạn code CSS sử dụng bộ chọn descendant để tạo phong cách cho các thẻ i như sau:
+- Thẻ i1: Chữ đỏ nền trắng
+- Thẻ i2: Chữ trắng nền xanh
+- Thẻ i3: Chữ hoa ở đầu từ, màu chữ cam
+<html>
+        <head>
+            <title>Vi du Descendant</title>
+            <style>
+            div i{
+            color: red;
+            background-color: white;
+            }
+            div b i{
+                color: white;
+                background-color: blue;
+            }
+            div p b i{
+                color: orangered;
+                text-transform: capitalize;
+            }
+            </style>
+        </head>
+        <body>
+            <div>
+                <p>The p</p>
+                <span>The span</span>
+                <i>The i 1</i>
+                <p>
+                    <b>
+                        The b nam trong p
+                        <i>The i 3</i>
+                    </b>
+                </p>
+                <b>
+                    The b nam trong div
+                    <i>The i 2</i>
+                </b>
+            </div>
+        </body>
+</html>
